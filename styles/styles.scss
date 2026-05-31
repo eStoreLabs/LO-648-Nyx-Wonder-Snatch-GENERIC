@@ -24,7 +24,7 @@ $px-XL: 32px;
 $px-XXL: 48px;
 
 $color-main: #ffffff;
-$color-bg: #F732CD;
+$color-bg: #8f3db2;
 $color-accent: #00c380;
 $color-accent-2: #eb2524;
 $color-accent-3: #fdcf49;
@@ -101,6 +101,17 @@ $transition: all 200ms ease-in-out;
     }
   }
 
+  .es-section-subtitle {
+    font-family: $text-secondary;
+    font-size: 20px;
+    font-weight: $fw-bold;
+    text-align: center;
+    text-transform: uppercase;
+    text-wrap: balance;
+    color: $color-main;
+    line-height: 1.2;
+  }
+
   .sr-only {
     position: absolute !important;
     width: 1px;
@@ -117,18 +128,21 @@ $transition: all 200ms ease-in-out;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    border-bottom: 2px solid gray;
 
     &__left {
       position: relative;
       margin: 0 auto;
-      padding-left: 15px;
-      padding-right: 15px;
+      // padding-left: 15px;
+      // padding-right: 15px;
       padding-top: 30px;
       padding-bottom: 30px;
       container-type: inline-size;
       container-name: kvLeft;
-      order: 2;
+      // order: 2;
       width: 100%;
+
 
       &-textCtn {
         min-height: 80px;
@@ -180,6 +194,15 @@ $transition: all 200ms ease-in-out;
       }
     }
 
+    &__logo {
+      max-width: 90px;
+      margin-bottom: 25px;
+      position: absolute;
+      left: 10px;
+      top: 15px;
+      margin-bottom: 25px;
+    }
+
     &__right {
       order: 3;
     }
@@ -224,15 +247,26 @@ $transition: all 200ms ease-in-out;
       text-transform: uppercase;
       font-family: $text-secondary;
       font-weight: $fw-bold;
-      font-size: 30px;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    &__middle-subtitle {
+      text-transform: uppercase;
+      font-family: $text-secondary;
+      font-weight: $fw-semi-bold;
+      font-size: 12px;
       text-align: center;
     }
 
     &__middle {
-      padding-top: 30px;
-      position: relative;
+      // padding-top: 30px;
+      position: absolute;
+      left: 0px;
+      bottom: 10px;
+
       z-index: 2;
-      order: 1;
+      // order: 1;
       padding-left: 15px;
     }
 
@@ -245,6 +279,13 @@ $transition: all 200ms ease-in-out;
       display: flex;
       flex-direction: row;
       position: relative;
+
+      &__logo {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        max-width: 200px;
+      }
 
 
       &__left {
@@ -282,12 +323,78 @@ $transition: all 200ms ease-in-out;
       }
 
       &__right {
-        width: 32%;
+        width: 45%;
         position: absolute;
         right: 0;
         bottom: 0;
         z-index: 1;
       }
+    }
+  }
+
+  .es-pro-formula {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid gray;
+
+    &__title {
+      text-transform: uppercase;
+      font-family: $text-secondary;
+      font-weight: $fw-bold;
+      font-size: 16px;
+      text-align: center;
+
+      &--black {
+        font-weight: $fw-black;
+      }
+    }
+
+    &__img {}
+
+    &__right {
+      position: relative;
+    }
+
+    &__ba-before-group {
+      position: absolute;
+      max-width: 120px;
+      bottom: 0;
+      left: 5px;
+    }
+
+    &__ba-after-group {
+      position: absolute;
+      max-width: 120px;
+      top: 15px;
+      right: 15px;
+    }
+
+    &__ba-wrapper {
+      position: relative;
+    }
+
+    &__before-title {
+      position: absolute;
+      top: 40%;
+      left: 51%;
+      transform: translate(-50%, -50%);
+      rotate: -6deg;
+      text-transform: uppercase;
+      color: #000000;
+      font-weight: 700;
+      font-size: 28px;
+    }
+
+    &__after-title {
+      position: absolute;
+      top: 44%;
+      left: 51%;
+      transform: translate(-50%, -50%);
+      rotate: -6deg;
+      text-transform: uppercase;
+      color: #000000;
+      font-weight: 700;
+      font-size: 28px;
     }
   }
 
@@ -400,17 +507,29 @@ $transition: all 200ms ease-in-out;
 
   .es-steps {
     padding-top: $px-XXL;
-    container-type: inline-size;
-    container-name: steps;
+    // container-type: inline-size;
+    // container-name: steps;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
+    border-bottom: 2px solid gray;
 
     &__inner {
       display: flex;
       gap: 30px;
+    }
+
+    &__text-item {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+    }
+
+    &__text-item-img {
+      width: 25px;
     }
 
     &__inner-item {
@@ -458,18 +577,18 @@ $transition: all 200ms ease-in-out;
     }
 
     &__title {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      text-wrap: balance;
+      // display: flex;
+      // flex-direction: column;
+      // align-items: center;
+      // text-align: center;
+      // text-wrap: balance;
       margin-bottom: $px-XXL;
       justify-content: center;
       margin-top: 20px;
 
       p {
-        line-height: 0.5;
-        width: max-content;
+        // line-height: 0.5;
+        // width: max-content;
       }
 
       @media (min-width: 450px) {
@@ -503,6 +622,7 @@ $transition: all 200ms ease-in-out;
       gap: $px-M;
       row-gap: 10px;
       max-width: 190px;
+      position: relative;
     }
 
     &__text {
@@ -541,6 +661,29 @@ $transition: all 200ms ease-in-out;
 
     &__right {
       position: relative;
+      display: flex;
+      flex-direction: column;
+      z-index: 2;
+    }
+
+    &__steps-title {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__text-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-items: flex-start;
+      margin: 0 auto;
+      gap: 10px;
+    }
+
+    &__text-img {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      max-width: 200px;
     }
 
     &__duet-deco {
@@ -708,6 +851,11 @@ $transition: all 200ms ease-in-out;
     position: relative;
     z-index: 2;
 
+    &--1 {
+      border-bottom: 2px solid gray;
+    }
+
+
     &__title {
       text-transform: uppercase;
       font-family: $text-secondary;
@@ -716,6 +864,29 @@ $transition: all 200ms ease-in-out;
       text-align: center;
       padding-top: 50px;
       padding-bottom: 40px;
+    }
+
+    &__slide-item {
+      max-width: 300px;
+      position: relative;
+    }
+
+    &__slide-item-title {
+      position: absolute;
+      top: 62px;
+      left: 50%;
+      transform: translate(-50%, -15px);
+      text-align: center;
+      width: 200px;
+      color: $color-black;
+      font-weight: $fw-bold;
+    }
+
+    &__slide-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-bottom: 2px solid gray;
     }
 
     //swiper styles
@@ -736,7 +907,7 @@ $transition: all 200ms ease-in-out;
       width: min-content;
       margin: auto;
       position: absolute;
-      bottom: 0;
+      bottom: 30px;
       left: 50%;
       transform: translateX(-50%);
       z-index: 5;
@@ -1035,6 +1206,74 @@ $transition: all 200ms ease-in-out;
 
   }
 
+  .es-gama {
+    border-bottom: 2px solid gray;
+    padding-top: 30px;
+    padding-bottom: 40px;
+
+
+    &__wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 25px;
+      padding: 5px;
+      // position: absolute;
+      // top: -25px;
+      // left: 25px;
+    }
+
+    &__item-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 25px;
+      padding: 5px;
+      position: absolute;
+      top: -25px;
+      left: 25px;
+    }
+
+    &__inner {
+      position: relative;
+    }
+
+    &__text {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $color-black;
+      text-transform: uppercase;
+      width: 150px;
+      text-align: center;
+      font-weight: $fw-bold;
+      rotate: -6deg;
+    }
+
+    &__text-label {
+      width: 125px;
+
+      &--4 {
+        width: 140px;
+      }
+    }
+
+    &__title {
+      text-transform: uppercase;
+      font-family: $text-secondary;
+      font-weight: $fw-bold;
+      font-size: 30px;
+      text-align: center;
+
+    }
+
+    &__title-img {
+      display: inline-block;
+      width: 50px;
+    }
+  }
+
   .es-video {
     padding: $px-XL;
     position: relative;
@@ -1053,7 +1292,7 @@ $transition: all 200ms ease-in-out;
       width: 100%;
       height: auto;
       aspect-ratio: 16 / 9;
-      border-radius: 30px;
+      // border-radius: 30px;
     }
 
     &__play {
@@ -1111,7 +1350,7 @@ $transition: all 200ms ease-in-out;
     @media (min-width: $media-breakpoint-md) {
       display: flex;
       justify-content: center;
-      padding: 64px;
+      padding: 100px;
 
       &__frame {
         width: calc(70% - 64px);
@@ -1119,7 +1358,7 @@ $transition: all 200ms ease-in-out;
       }
 
       &__video {
-        max-width: 70%;
+        max-width: 80%;
       }
     }
   }
@@ -1243,6 +1482,12 @@ $transition: all 200ms ease-in-out;
 
   @media screen and (min-width: 768px) {
 
+    .es-pro-formula {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
     .es-colors__title,
     .es-features__right-title,
     .es-cross__title {
@@ -1273,8 +1518,23 @@ $transition: all 200ms ease-in-out;
     }
 
     .es-steps {
+      flex-direction: row;
+      padding-bottom: 50px;
+      position: relative;
+
+      &__left {
+        padding-left: 15px;
+      }
+
+      &__right-img-wrapper {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 378px;
+      }
+
       &__title p {
-        font-size: 55px;
+        // font-size: 35px;
       }
 
       &__flexCtn {
@@ -1292,6 +1552,15 @@ $transition: all 200ms ease-in-out;
     }
 
     .es-colors {
+      // padding-top: 30px;
+      padding-bottom: 30px;
+
+      &__slide-container {
+        display: flex;
+        flex-direction: row;
+        padding: 50px 0;
+      }
+
       &__title p {
         font-size: 55px;
       }
@@ -1313,7 +1582,7 @@ $transition: all 200ms ease-in-out;
 
       &__right {
 
-        top: 8%;
+        top: 0%;
       }
 
       &__middle {
@@ -1326,8 +1595,16 @@ $transition: all 200ms ease-in-out;
         top: -15%;
       }
 
+      &__middle {
+        bottom: 65px;
+      }
+
       &__middle-title {
         font-size: 53px;
+      }
+
+      &__middle-subtitle {
+        font-size: 30px;
       }
 
       &__left-text {
