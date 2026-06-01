@@ -129,7 +129,7 @@ $transition: all 200ms ease-in-out;
     flex-direction: column;
     align-items: center;
     position: relative;
-    border-bottom: 2px solid gray;
+    border-bottom: 1px solid gray;
 
     &__left {
       position: relative;
@@ -280,14 +280,6 @@ $transition: all 200ms ease-in-out;
       flex-direction: row;
       position: relative;
 
-      &__logo {
-        position: absolute;
-        top: 50px;
-        left: 50px;
-        max-width: 200px;
-      }
-
-
       &__left {
         width: 38%;
         z-index: 2;
@@ -332,10 +324,18 @@ $transition: all 200ms ease-in-out;
     }
   }
 
+  .es-footer {
+    background: #641e87;
+
+    &__img {
+      max-width: 300px;
+    }
+  }
+
   .es-pro-formula {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-bottom: 2px solid gray;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid gray;
 
     &__title {
       text-transform: uppercase;
@@ -352,20 +352,21 @@ $transition: all 200ms ease-in-out;
     &__img {}
 
     &__right {
+      margin-top: 30px;
       position: relative;
     }
 
     &__ba-before-group {
       position: absolute;
       max-width: 120px;
-      bottom: 0;
+      bottom: -38px;
       left: 5px;
     }
 
     &__ba-after-group {
       position: absolute;
       max-width: 120px;
-      top: 15px;
+      top: -25px;
       right: 15px;
     }
 
@@ -514,7 +515,7 @@ $transition: all 200ms ease-in-out;
     flex-direction: column;
     align-items: center;
     position: relative;
-    border-bottom: 2px solid gray;
+    border-bottom: 1px solid gray;
 
     &__inner {
       display: flex;
@@ -529,7 +530,7 @@ $transition: all 200ms ease-in-out;
     }
 
     &__text-item-img {
-      width: 25px;
+      width: 20px;
     }
 
     &__inner-item {
@@ -582,7 +583,7 @@ $transition: all 200ms ease-in-out;
       // align-items: center;
       // text-align: center;
       // text-wrap: balance;
-      margin-bottom: $px-XXL;
+      // margin-bottom: $px-XXL;
       justify-content: center;
       margin-top: 20px;
 
@@ -847,12 +848,33 @@ $transition: all 200ms ease-in-out;
     }
   }
 
+  .es-steps {
+    &__title {
+      text-transform: uppercase;
+      font-family: $text-secondary;
+      font-weight: $fw-black;
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    &__subtitle {
+      text-transform: uppercase;
+      font-family: $text-secondary;
+      font-weight: $fw-bold;
+      font-size: 24px;
+      line-height: 1;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+
   .es-colors {
     position: relative;
     z-index: 2;
 
     &--1 {
-      border-bottom: 2px solid gray;
+      border-bottom: 1px solid gray;
     }
 
 
@@ -866,6 +888,24 @@ $transition: all 200ms ease-in-out;
       padding-bottom: 40px;
     }
 
+    &__slide-title {
+      text-transform: uppercase;
+      font-family: $text-secondary;
+      font-weight: $fw-black;
+      font-size: 30px;
+      text-align: center;
+      padding-top: 50px;
+      margin-bottom: 25px;
+
+      &--red {
+        color: #e93453;
+      }
+
+      &--pink {
+        color: #ffc4cf;
+      }
+    }
+
     &__slide-item {
       max-width: 300px;
       position: relative;
@@ -875,18 +915,24 @@ $transition: all 200ms ease-in-out;
       position: absolute;
       top: 62px;
       left: 50%;
-      transform: translate(-50%, -15px);
+      transform: translate(-38%, -25px);
       text-align: center;
       width: 200px;
       color: $color-black;
       font-weight: $fw-bold;
+
+      &--1 {
+        top: 77px;
+        left: 43%;
+        transform: translate(-38%, -25px);
+      }
     }
 
     &__slide-container {
       display: flex;
       flex-direction: column;
       align-items: center;
-      border-bottom: 2px solid gray;
+      border-bottom: 1px solid gray;
     }
 
     //swiper styles
@@ -898,6 +944,10 @@ $transition: all 200ms ease-in-out;
 
     .swiper-slide {
       height: auto;
+
+      &--1 {
+        // padding-top: 50px;
+      }
     }
 
     .swiper-controls {
@@ -1207,9 +1257,11 @@ $transition: all 200ms ease-in-out;
   }
 
   .es-gama {
-    border-bottom: 2px solid gray;
+    border-bottom: 1px solid gray;
     padding-top: 30px;
     padding-bottom: 40px;
+    z-index: 2;
+    position: relative;
 
 
     &__wrapper {
@@ -1276,7 +1328,13 @@ $transition: all 200ms ease-in-out;
 
   .es-video {
     padding: $px-XL;
+    padding-top: 156px;
     position: relative;
+    border-bottom: 1px solid gray;
+
+    &__label {
+      display: none;
+    }
 
     &__frame {
       position: absolute;
@@ -1472,20 +1530,99 @@ $transition: all 200ms ease-in-out;
   // }
 
   @media screen and (min-width: 450px) {
+    .es-kv {
+
+      &__middle {
+        bottom: 25px;
+      }
+
+      &__middle-title {
+        font-size: 24px;
+      }
+
+      &__middle-subtitle {
+        font-size: 16px;
+      }
+    }
+
     .es-features {
       &__left {
         flex-direction: row;
       }
     }
+
+    .es-pro-formula {
+
+      &__title {
+        font-size: 30px;
+      }
+
+      &__ba-after-group {
+        top: -30px;
+        right: 15px;
+      }
+
+      &__ba-before-group {
+        left: 14px;
+        bottom: -35px;
+      }
+    }
   }
 
 
+  @media screen and (min-width: 600px) {
+    .es-kv {
+      &__middle {
+        bottom: 25px;
+      }
+
+      &__middle-title {
+        font-size: 32px;
+      }
+
+      &__middle-subtitle {
+        font-size: 20px;
+      }
+
+      &__logo {
+        top: 30px;
+        left: 30px;
+        max-width: 175px;
+      }
+    }
+  }
+
   @media screen and (min-width: 768px) {
+    .es-kv {
+      &__logo {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        max-width: 200px;
+      }
+
+      &__middle-title {
+        font-size: 38px;
+      }
+
+      &__middle-subtitle {
+        font-size: 25px;
+      }
+    }
 
     .es-pro-formula {
       display: flex;
       flex-direction: row;
       align-items: center;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      column-gap: 10px;
+
+      &__title {
+        font-size: 60px;
+      }
     }
 
     .es-colors__title,
@@ -1553,12 +1690,28 @@ $transition: all 200ms ease-in-out;
 
     .es-colors {
       // padding-top: 30px;
-      padding-bottom: 30px;
+      // padding-bottom: 30px;
+
+      &__container {
+        padding-bottom: 50px;
+      }
 
       &__slide-container {
         display: flex;
         flex-direction: row;
-        padding: 50px 0;
+        // padding: 50px 0;
+        padding-bottom: 50px;
+
+      }
+
+      &__slide-item-title {
+        top: 47px;
+        left: 46%;
+
+        &--1 {
+          top: 47px;
+          left: 38%;
+        }
       }
 
       &__title p {
@@ -1571,6 +1724,16 @@ $transition: all 200ms ease-in-out;
         width: 69%;
       }
     }
+
+    .es-video {
+      &__label {
+        display: block;
+        position: absolute;
+        top: 68px;
+        right: 91px;
+        width: 165px;
+      }
+    }
   }
 
   @media screen and (min-width: 998px) {
@@ -1579,6 +1742,7 @@ $transition: all 200ms ease-in-out;
       &__middle-img {
         max-width: 300px;
       }
+
 
       &__right {
 
@@ -1609,6 +1773,18 @@ $transition: all 200ms ease-in-out;
 
       &__left-text {
         font-size: 18px;
+      }
+    }
+
+    .es-pro-formula {
+      &__ba-before-group {
+        left: 17px;
+        bottom: -30px;
+      }
+
+      &__ba-after-group {
+        top: -30px;
+        right: 25px;
       }
     }
 
@@ -1667,16 +1843,49 @@ $transition: all 200ms ease-in-out;
     .es-steps {
       flex-direction: row;
 
+      &__title {
+        font-size: 37px;
+      }
+
+      &__subtitle {
+        margin-bottom: 35px;
+      }
+
       &__right {
-        padding-left: 50px;
+        padding-left: 88px;
+        margin-top: -45px;
+        margin-left: -11px;
       }
 
       &__inner-img {
-        margin-top: -70px;
-        width: 110%;
+        margin-top: 12px;
+        margin-left: 16px;
+        width: 138%;
+      }
+
+      &__text-img {
+        padding-top: 46px;
+        max-width: 258px;
+        margin-left: 22px;
+        // margin-top: 20px;
       }
 
     }
 
+    .es-colors {
+      &__slide-item-title {
+        top: 53px;
+        left: 48%;
+
+        &--1 {
+          top: 54px;
+          left: 40%;
+        }
+      }
+
+      &__slide-title {
+        font-size: 45px;
+      }
+    }
   }
 }
