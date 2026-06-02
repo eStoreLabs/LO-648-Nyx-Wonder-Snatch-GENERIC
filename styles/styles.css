@@ -374,7 +374,7 @@
   padding-top: 10px;
   gap: 15px;
   -moz-column-gap: 65px;
-       column-gap: 65px;
+  column-gap: 65px;
 }
 #es-rc #es-rc-content .es-features__icons-img {
   margin-bottom: 2px;
@@ -1268,7 +1268,7 @@
     padding-top: 50px;
     padding-bottom: 50px;
     -moz-column-gap: 10px;
-         column-gap: 10px;
+    column-gap: 10px;
   }
   #es-rc #es-rc-content .es-pro-formula__title {
     font-size: 60px;
@@ -1322,7 +1322,7 @@
   #es-rc #es-rc-content .es-steps__flexCtn {
     padding-bottom: 0;
     -moz-column-gap: 20px;
-         column-gap: 20px;
+    column-gap: 20px;
   }
   #es-rc #es-rc-content .es-steps__flexItem {
     max-width: 225px;
