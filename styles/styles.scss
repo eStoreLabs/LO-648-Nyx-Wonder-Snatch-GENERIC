@@ -285,6 +285,9 @@ $transition: all 200ms ease-in-out;
       bottom: 0;
       right: -13px;
       max-width: 100px;
+      bottom: -30px;
+      right: -35px;
+      max-width: 100px;
     }
 
     &__inner {
@@ -959,6 +962,13 @@ $transition: all 200ms ease-in-out;
         column-gap: 20px;
       }
 
+      &__label {
+        position: absolute;
+        bottom: -29px;
+        right: -13px;
+        max-width: 100px;
+      }
+
       &__flexItem {
         max-width: 225px;
       }
@@ -1026,10 +1036,6 @@ $transition: all 200ms ease-in-out;
 
   @media screen and (min-width: 998px) {
     .es-kv {
-
-
-
-
       &__middle {
         padding-left: 15px;
         padding-right: 15px;
@@ -1071,6 +1077,12 @@ $transition: all 200ms ease-in-out;
 
       &__title {
         font-size: 37px;
+      }
+
+      &__label {
+        bottom: 0;
+        right: -13px;
+        max-width: 100px;
       }
 
       &__subtitle {
